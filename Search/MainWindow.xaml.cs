@@ -26,43 +26,43 @@ namespace Search
         public MainWindow()
         {
             InitializeComponent();
-            List<User> items = new List<User>();
-            items.Add(new User() { Name = "Shiv Raj", Age = 25 });
-            items.Add(new User() { Name = "Pushpa raj", Age = 23 });
-            items.Add(new User() { Name = "Joe Dav", Age = 28 });
-            items.Add(new User() { Name = "Abhram", Age = 25 });
-            lvUsers.ItemsSource = items;
 
-            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(lvUsers.ItemsSource);
-            view.Filter = UserFilter;
+            GetAllData();
         }
 
-        private bool UserFilter(object item)
+        DataTable dt;
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (String.IsNullOrEmpty(txtFilter.Text))
-                return true;
-            else
-                return ((item as User).Name.IndexOf(txtFilter.Text, StringComparison.OrdinalIgnoreCase) >= 0);
+            DataView DV = new DataView(dt);
+            DV.RowFilter = String.Format("fn LIKE '%{0}%'", txtSearch.Text);
+            lvCus.ItemsSource = DV;
+        
         }
 
-
-        private void txtFilter_TextChanged(object sender, TextChangedEventArgs e)
+        // Display all the data to ListView
+        public void GetAllData()
         {
-            CollectionViewSource.GetDefaultView(lvUsers.ItemsSource).Refresh();
+            string ConString = System.Configuration.ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
+            string CmdString = string.Empty;
+            using (SqlConnection con = new SqlConnection(ConString))
+            {
+                try
+                {
+                    CmdString = "SELECT * FROM TbCus";
+                    SqlCommand cmd = new SqlCommand(CmdString, con);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    dt = new DataTable("Gov");
+                    da.Fill(dt);
+                    lvCus.ItemsSource = dt.DefaultView;
+                    da.Update(dt);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
         }
+        // Display all the data to ListView
     }
-
-    public enum SexType { Male, Female };
-
-
-    public class User
-        {
-                public string Name { get; set; }
-
-                public int Age { get; set; }
-
-                public string Mail { get; set; }
-
-                public SexType Sex { get; set; }
-        }
 }
