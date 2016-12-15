@@ -1,0 +1,13 @@
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\bin\Debug\Search.exe.config
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\bin\Debug\Search.exe
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\bin\Debug\Search.pdb
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\Search.csprojResolveAssemblyReference.cache
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\MainWindow.baml
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\MainWindow.g.cs
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\App.g.cs
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\Search_MarkupCompile.cache
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\Search.g.resources
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\Search.Properties.Resources.resources
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\Search.csproj.GenerateResource.Cache
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\Search.exe
+c:\users\shivrajbadu\documents\visual studio 2012\Projects\Search\Search\obj\Debug\Search.pdb
