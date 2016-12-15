@@ -27,10 +27,10 @@ namespace Search
         {
             InitializeComponent();
             List<User> items = new List<User>();
-            items.Add(new User() { Name = "John Doe", Age = 42 });
-            items.Add(new User() { Name = "Jane Doe", Age = 39 });
-            items.Add(new User() { Name = "Sammy Doe", Age = 13 });
-            items.Add(new User() { Name = "Donna Doe", Age = 13 });
+            items.Add(new User() { Name = "Shiv Raj", Age = 25 });
+            items.Add(new User() { Name = "Pushpa raj", Age = 23 });
+            items.Add(new User() { Name = "Joe Dav", Age = 28 });
+            items.Add(new User() { Name = "Abhram", Age = 25 });
             lvUsers.ItemsSource = items;
 
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(lvUsers.ItemsSource);
